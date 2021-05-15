@@ -1,0 +1,41 @@
+a{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#para{
+    border: 2px solid aqua;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+h3{
+    background-color: #c4ffd5;
+    border-width: 5px;
+    border-style: dotted;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#ouf{
+    background: lightgreen url('booooooooom.jpg');
+    background-size: 1000px;
+    height: 1000px;
+    width: 1000px;
+    height: 500px;
+}
+
+.navbar{
+    background-color: rgb(159, 207, 255);
+    width: 400px;
+
+}
+.navbar ul{
+    overflow: auto;
+    margin: 10px 40px;
+    list-style: none;
+}
+.navbar li{
+    list-style: none;
+    float: left;
+    padding-left: 20px;
+}

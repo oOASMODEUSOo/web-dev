@@ -1,0 +1,60 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url("people-2604149_1920.jpg");
+}
+
+.navbar li{
+    color: aliceblue;
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 20px;
+}
+
+.navbar{
+    display: inline-block;
+}
+
+.navbar li a{
+    color: aliceblue;
+    text-decoration: none;
+}    
+
+.navbar li a:hover{
+    text-decoration: underline;
+}
+
+.left{
+    color: aliceblue;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.center{
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    border: 2px solid white;
+    color: aliceblue;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.right{
+    top: 10px;
+    border: 2px solid white;
+    color: aliceblue;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+}
+
+img{
+    width: 80px;
+}
+
