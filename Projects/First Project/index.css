@@ -27,12 +27,21 @@ body{
     text-decoration: underline;
 }
 
+.navbar li a:active{
+    color: cyan;
+}
+
 .left{
     color: aliceblue;
     display: inline-block;
     position: absolute;
     left: 10px;
     top: 10px;
+    background-color: black;
+}
+
+.left img{
+    width: 70px;
 }
 
 .center{
@@ -46,7 +55,7 @@ body{
 }
 
 .right{
-    top: 10px;
+    top: 20px;
     border: 2px solid white;
     color: aliceblue;
     display: inline-block;
@@ -54,7 +63,16 @@ body{
     right: 10px;
 }
 
-img{
-    width: 80px;
+#logot{
+    color:aliceblue;
+    text-align: center;
 }
 
+.btn{
+    padding: 1.6px 12px;
+    background: black;
+    color: aliceblue;
+    margin: 4.9px 5.2px;
+    border: 2px solid aliceblue ;
+    border-radius: 9px;
+}
