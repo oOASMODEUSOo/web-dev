@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+
+    <style>
+        /* FONTS  */
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+        /* use case of this css font-family: 'PT Sans', sans-serif; */
+
+        /* variable css */
+        :root{
+            --light-grey: #272627;
+            --black: rgb(31, 30, 30);
+            --sea-green: #57dcbe;
+            --some-blue: #57acdc;
+            --white-colour: #fff;
+
+            --mb-1: 0.5rem;
+            --mb-2: 1rem;
+            --mb-3: 1.5rem;
+            --mb-4: 2rem;
+            --mb-5: 2.5rem;
+            --mb-6: 3rem;
+
+            --body-font: 'PT Sans', sans-serif;;
+            --big-font-size: 2rem;
+            --h2-font-size: 1.25rem;
+            --normal-font-size: 0.9rem;
+        }
+
+        /* main css */
+        *{
+            font-family: var(--body-font);
+            background-color: var(--light-grey); 
+        }
+
+        .body{
+            background-color: var(--light-grey);
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .upper{
+            background-color: var(--black);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--black);
+
+        }
+
+        .navlinks{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--mb-2);
+            list-style-type: none;
+            padding-right: var(--mb-6);
+            background-color: var(--black);
+
+        }
+
+        .navlinks a{
+            padding: var(--mb-2);
+            color: #fff;
+            text-decoration: wavy;
+            background-color: var(--black);
+        }
+
+        .navbar a:hover{
+            color: #57acdc;
+        }
+
+        .logo{
+            height: var(--mb-6);
+            width: var(--mb-6);
+            padding-top: var(--mb-2);
+            padding-left: var(--mb-6);
+            background-color: var(--black);
+
+        }
+
+        .nameme{
+            font-size: large;
+            color: var(--white-colour);
+            background-color: var(--black);
+            font-size: larger;
+            padding-left: 13rem;
+        }
+
+        .logocontainer{
+            background-color: var(--black);
+        }
+
+        .heading{
+            font-size: 40px;
+            color: var(--white-colour);
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+        }
+
+        .container_for_hobbies{
+            display: flex;
+            justify-content: center;
+            color: var(--white-colour);
+        }
+
+        .progress{
+            background-color: var(--sea-green);
+            border-radius: 20px;
+            height: 30px;
+            width: 300px;
+        }
+
+        .progress-done-1{
+            height: 100%;
+            width: 150px;
+            background: linear-gradient(to right, hsl(197, 92%, 60%), var(--some-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-done-2{
+            height: 100%;
+            width: 180px;
+            background: linear-gradient(to right, hsl(197, 92%, 60%), var(--some-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-done-3{
+            height: 100%;
+            width: 120px;
+            background: linear-gradient(to right, hsl(197, 92%, 60%), var(--some-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="upper">
+        <nav class="navbar">
+            <a href="index.html" class="logocontainer"><img src="O-Letter-Logo.png" alt="logo can't be loaded" class="logo"></a>
+            <span class="nameme">O J A S</span>
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myHobbies.html">My Hobbies</a></li>
+                <li><a href="skillset.html">My Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="heading">
+            <h1>My Skills</h1>
+        </div>
+        <div class="container_for_hobbies">
+            <ul class="hobbylist">
+                <li>
+                    <h1>Python</h1>
+                    <div class="progress">
+	                    <div class="progress-done-2" data-done="70">
+		                    60%
+	                    </div>
+                    </div>
+                </li>
+                <li>
+                    <h1>C++</h1>
+                    <div class="progress">
+	                    <div class="progress-done-3" data-done="70">
+		                    40%
+	                    </div>
+                    </div>
+                </li>
+                <li>
+                    <h1>Web-Dev</h1>
+                    <div class="progress">
+	                    <div class="progress-done-1" data-done="70">
+		                    50%
+	                    </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
