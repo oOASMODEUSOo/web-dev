@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        /* PAGE 1 CSS */
+        /* FONTS  */
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+        /* use case of this css font-family: 'PT Sans', sans-serif; */
+
+        /* variable css */
+        :root{
+            --light-grey: #272627;
+            --black: rgb(31, 30, 30);
+            --sea-green: #57dcbe;
+            --some-blue: #57acdc;
+            --white-colour: #fff;
+
+            --mb-1: 0.5rem;
+            --mb-2: 1rem;
+            --mb-3: 1.5rem;
+            --mb-4: 2rem;
+            --mb-5: 2.5rem;
+            --mb-6: 3rem;
+
+            --body-font: 'PT Sans', sans-serif;;
+            --big-font-size: 2rem;
+            --h2-font-size: 1.25rem;
+            --normal-font-size: 0.9rem;
+        }
+
+        /* main css */
+        *{
+            font-family: var(--body-font);
+            background-color: var(--light-grey); 
+        }
+
+        .body{
+            background-color: var(--light-grey);
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .upper{
+            background-color: var(--black);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: var(--black);
+
+        }
+
+        .navlinks{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: var(--mb-2);
+            list-style-type: none;
+            padding-right: var(--mb-6);
+            background-color: var(--black);
+
+        }
+
+        .navlinks a{
+            padding: var(--mb-2);
+            color: #fff;
+            text-decoration: wavy;
+            background-color: var(--black);
+        }
+
+        .navbar a:hover{
+            color: #57acdc;
+        }
+
+        .logo{
+            height: var(--mb-6);
+            width: var(--mb-6);
+            padding-top: var(--mb-2);
+            padding-left: var(--mb-6);
+            background-color: var(--black);
+
+        }
+
+        .nameme{
+            font-size: large;
+            color: var(--white-colour);
+            background-color: var(--black);
+            font-size: larger;
+            padding-left: 13rem;
+        }
+
+        .logocontainer{
+            background-color: var(--black);
+        }
+
+        .home_data{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 60px;
+        }
+
+        .text_data{
+            color: #fff;
+            padding-bottom: 50px;
+            font-size: 50px;
+            /* border: #57acdc solid; */
+            align-items: center;
+            text-align: center;
+        }
+
+        .myPhoto{
+            height: 558px;
+            width: 293px;
+            border-radius: 2rem;
+        }
+
+        .intro{
+            padding-top: 20px;
+            margin: 0px;
+        }
+
+        .mere_btns{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btn-myhobbies, .btn-myskills{
+            width: 200px;
+            height: 50px;
+            border: none;
+            color: var(--white-colour);
+            background-color: var(--sea-green);
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 0 var(--white-colour);
+            transition: ease-out 0.3s;
+            font-size: 2rem;
+            outline: none;
+            margin: 10px;
+        }
+
+        .btn-myhobbies:hover, .btn-myskills:hover{
+            box-shadow: inset 200px 0 0 0 var(--some-blue);
+            color: var(--black);
+            cursor: pointer;
+        }
+
+        .more_detail{
+            margin: 0;
+        }
+
+        #menu-icon{
+            margin: 0px;
+            height: 50px;
+            width: 50px;
+            z-index: 0;
+            display: none;
+        }
+
+        @media only screen and (max-width:758px){
+                nav ul{
+                    width: 100%;
+                    background-color: black;
+                    position: absolute;
+                    top: 75px;
+                    right: 0;
+                    z-index: 2;
+                }
+                nav ul li{
+                    display: block;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                .navlinks{
+                    display: block;
+                }
+
+                #menu-icon{
+                    display: block;
+                }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="upper">
+        <nav class="navbar">
+            <a href="#" class="logocontainer"><img src="O-Letter-Logo.png" alt="logo can't be loaded" class="logo"></a>
+            <span class="nameme">O J A S</span>
+            <ul class="navlinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="myHobbies.html">My Hobbies</a></li>
+                <li><a href="skillset.html">My Skills</a></li>
+            </ul>
+            <img src="menu icon 3.0.png" alt="menu here" id='menu-icon' onclick="togglemenu()">
+        </nav>
+    </header>
+    <main class="main_content">
+        <section class="home_data">
+            <div class="text_data">
+                <h1 class="intro">Hi, I am <br> <span class="myname">Ojas</span></h1>
+                <h3 class="more_detail">Programmer <br> and <br> Neoteric </h3>
+                <div class="mere_btns">
+                    <a href="myHobbies.html"><button class="btn-myhobbies">My Hobbies</button></a>
+                    <a href="skillset.html"><button class="btn-myskills">My Skills</button></a>
+                </div>
+            </div>
+            <img src="Use this photo for website.jpeg" alt="Nai load hori" class="myPhoto"> 
+        </section>
+    </main>
+
+    <script>
+        var navlinks = document.getElementsByClassName("navlinks")
+        navlinks.style.maxHeight = '0px';
+        function togglemenu(){
+            if (navlinks.style.maxHeight == '0px'){
+                navlinks.style.maxHeight == '100px';
+            }
+            else{
+                navlinks.style.maxHeight == '0px';
+            }
+        }
+    </script>
+</body>
+</html>
+

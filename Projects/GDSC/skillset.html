@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
+
     <style>
-        /* PAGE 1 CSS */
         /* FONTS  */
         @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
         /* use case of this css font-family: 'PT Sans', sans-serif; */
@@ -52,7 +52,7 @@
 
         .navbar{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             background-color: var(--black);
 
@@ -101,91 +101,112 @@
             background-color: var(--black);
         }
 
-        .home_data{
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 60px;
-        }
-
-        .text_data{
-            color: #fff;
-            padding-bottom: 50px;
-            font-size: 50px;
-            /* border: #57acdc solid; */
-            align-items: center;
-            text-align: center;
-        }
-
-        .myPhoto{
-            height: 558px;
-            width: 293px;
-            border-radius: 2rem;
-        }
-
-        .intro{
-            padding-top: 20px;
-            margin: 0px;
-        }
-
-        .mere_btns{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-        }
-
-        .btn-myhobbies, .btn-myskills{
-            width: 200px;
-            height: 50px;
-            border: none;
+        .heading{
+            font-size: 40px;
             color: var(--white-colour);
+            display: flex;
+            justify-content: center;
+            text-decoration: underline;
+        }
+
+        .container_for_hobbies{
+            display: flex;
+            justify-content: center;
+            color: var(--white-colour);
+        }
+
+        .progress{
             background-color: var(--sea-green);
-            border-radius: 4px;
-            box-shadow: inset 0 0 0 0 var(--white-colour);
-            transition: ease-out 0.3s;
-            font-size: 2rem;
-            outline: none;
-            margin: 10px;
+            border-radius: 20px;
+            height: 30px;
+            width: 300px;
         }
 
-        .btn-myhobbies:hover, .btn-myskills:hover{
-            box-shadow: inset 200px 0 0 0 var(--some-blue);
-            color: var(--black);
-            cursor: pointer;
+        .progress-done-1{
+            height: 100%;
+            width: 150px;
+            background: linear-gradient(to right, hsl(197, 92%, 60%), var(--some-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .more_detail{
-            margin: 0;
+        .progress-done-2{
+            height: 100%;
+            width: 180px;
+            background: linear-gradient(to right, hsl(197, 92%, 60%), var(--some-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        .progress-done-3{
+            height: 100%;
+            width: 120px;
+            background: linear-gradient(to right, hsl(197, 92%, 60%), var(--some-blue));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #menu-icon{
+            margin: 0px;
+            height: 50px;
+            width: 50px;
+            z-index: 0;
+            display: none;
+        }
+
     </style>
 </head>
 <body>
     <header class="upper">
         <nav class="navbar">
-            <a href="#" class="logocontainer"><img src="O-Letter-Logo.png" alt="logo can't be loaded" class="logo"></a>
+            <a href="index.html" class="logocontainer"><img src="O-Letter-Logo.png" alt="logo can't be loaded" class="logo"></a>
             <span class="nameme">O J A S</span>
             <ul class="navlinks">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="myHobbies.html">My Hobbies</a></li>
                 <li><a href="skillset.html">My Skills</a></li>
             </ul>
+            <img src="menu icon 3.0.png" alt="menu here" id='menu-icon'>
         </nav>
     </header>
-    <main class="main_content">
-        <section class="home_data">
-            <div class="text_data">
-                <h1 class="intro">Hi, I am <br> <span class="myname">Ojas</span></h1>
-                <h3 class="more_detail">Programmer <br> and <br> Neoteric </h3>
-                <div class="mere_btns">
-                    <a href="myHobbies.html"><button class="btn-myhobbies">My Hobbies</button></a>
-                    <a href="skillset.html"><button class="btn-myskills">My Skills</button></a>
-                </div>
-            </div>
-            <img src="Use this photo for website.jpeg" alt="Nai load hori" class="myPhoto">
-            
-        </section>
+    <main>
+        <div class="heading">
+            <h1>My Skills</h1>
+        </div>
+        <div class="container_for_hobbies">
+            <ul class="hobbylist">
+                <li>
+                    <h1>Python</h1>
+                    <div class="progress">
+	                    <div class="progress-done-2" data-done="70">
+		                    60%
+	                    </div>
+                    </div>
+                </li>
+                <li>
+                    <h1>C++</h1>
+                    <div class="progress">
+	                    <div class="progress-done-3" data-done="70">
+		                    40%
+	                    </div>
+                    </div>
+                </li>
+                <li>
+                    <h1>Web-Dev</h1>
+                    <div class="progress">
+	                    <div class="progress-done-1" data-done="70">
+		                    50%
+	                    </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </main>
 </body>
 </html>
-
